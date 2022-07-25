@@ -11,11 +11,15 @@ import {
   WrapperTitle,
 } from './styles';
 
-export function PlacesHomeComponent() {
+interface Props {
+  onPress: () => void;
+}
+
+export function PlacesHomeComponent({onPress}: Props) {
   const theme = useTheme();
 
   return (
-    <Wrapper activeOpacity={1}>
+    <Wrapper activeOpacity={1} onPress={onPress}>
       <Container>
         <PlacePhoto source={theme.images.baliDetails} />
 

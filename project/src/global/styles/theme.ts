@@ -21,6 +21,7 @@ export default {
   images: {
     eu: require('../assets/Images/Eu.jpeg'),
     baliDetails: require('../assets/Images/baliDetails.png'),
+    bali: require('../assets/Images/Bali.png'),
   },
 
   icons: {

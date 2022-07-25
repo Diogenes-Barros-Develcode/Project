@@ -10,7 +10,7 @@ export function Routes() {
       screenOptions={{
         headerShown: false,
       }}>
-      <Tabs.Screen name="Home" component={Home} />
+      <Tabs.Screen name="Inicio" component={Home} />
     </Tabs.Navigator>
   );
 }

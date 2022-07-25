@@ -1,5 +1,6 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {ScrollView, StatusBar} from 'react-native';
+import {StatusBar} from 'react-native';
 import {useTheme} from 'styled-components';
 import {InputComponent} from '../../components/InputComponent';
 import {PlacesComponent} from '../../components/PlacesComponent';
@@ -20,6 +21,9 @@ import {
 
 export function Home() {
   const theme = useTheme();
+
+  const navigation = useNavigation();
+
   return (
     <Container>
       <StatusBar
@@ -56,7 +60,9 @@ export function Home() {
 
       <ContentPlaceDetails>
         <WrapperPlacesHome>
-          <PlacesHomeComponent />
+          <PlacesHomeComponent
+            onPress={() => navigation.navigate('CityPage' as never)}
+          />
         </WrapperPlacesHome>
       </ContentPlaceDetails>
     </Container>

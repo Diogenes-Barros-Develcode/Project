@@ -1,4 +1,5 @@
 import React from 'react';
+import {ImageSourcePropType} from 'react-native';
 import {useTheme} from 'styled-components';
 import {
   Container,
@@ -6,6 +7,8 @@ import {
   DetailsDescription,
   DetailsTitle,
   PlacePhoto,
+  ReadMore,
+  ReadMoreButton,
   Wrapper,
   WrapperDescription,
   WrapperTitle,
@@ -13,35 +16,28 @@ import {
 
 interface Props {
   onPress: () => void;
+  source: ImageSourcePropType;
+  name: string;
+  description: string;
 }
 
-export function PlacesHomeComponent({onPress}: Props) {
-  const theme = useTheme();
-
+export function PlacesHomeComponent({
+  onPress,
+  source,
+  name,
+  description,
+}: Props) {
   return (
     <Wrapper activeOpacity={1} onPress={onPress}>
       <Container>
-        <PlacePhoto source={theme.images.baliDetails} />
+        <PlacePhoto source={source} />
 
         <Details>
           <WrapperTitle>
-            <DetailsTitle>Bali</DetailsTitle>
+            <DetailsTitle>{name}</DetailsTitle>
           </WrapperTitle>
           <WrapperDescription>
-            <DetailsDescription>
-              There is no other place like Bali in this world. A magical mix of
-              culture, people, nature, activities, weather, culinary delights,
-              nightlife and many other interesting things.Bali, the famed Island
-              of the Gods, with its varied landscape of hills and mountains,
-              rugged coastlines and sandy beaches, lush rice terraces, and
-              volcanic hillsides all providing a picturesque backdrop to its
-              colorful, deeply spiritual, and unique culture stakes a serious
-              claim to be paradise on earth. With world-class surfing and
-              diving, a large number of cultural, historical, and archaeological
-              attractions, and an enormous range of accommodations, this is one
-              of the world's most popular island destinations and one which
-              consistently wins travel awards.
-            </DetailsDescription>
+            <DetailsDescription>{description}</DetailsDescription>
           </WrapperDescription>
         </Details>
       </Container>

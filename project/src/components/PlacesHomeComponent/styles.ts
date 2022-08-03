@@ -13,7 +13,9 @@ export const Container = styled.View.attrs({
   border-radius: ${RFValue(25)}px;
 `;
 
-export const PlacePhoto = styled.Image`
+export const PlacePhoto = styled.Image.attrs({
+  resizeMode: 'stretch',
+})`
   width: ${RFValue(320)}px;
   height: ${RFValue(200)}px;
   border-radius: ${RFValue(25)}px;
@@ -42,3 +44,11 @@ export const WrapperDescription = styled.View``;
 export const DetailsDescription = styled.Text.attrs({
   numberOfLines: 4,
 })``;
+
+export const ReadMoreButton = styled.TouchableOpacity``;
+
+export const ReadMore = styled.Text`
+  font-size: ${RFValue(12)}px;
+  font-weight: 500;
+  color: ${({theme}) => theme.colors.text_primary};
+`;

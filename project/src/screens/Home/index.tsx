@@ -136,7 +136,7 @@ export function Home() {
             description="Dentre os nomes dos dinossauros mais famosos, os Tyrannosaurus não são conhecidos apenas por filmes ou livros.
             Acontece que estes dinos carnívoros foram um dos gêneros mais abundantes de dinossauros do planeta,
             com estimativas apontando bilhões de indivíduos vivendo ao longo dos 2 milhões de anos de existência do grupo (68-66 M.A)."
-            onPress={() => navigation.navigate('CityPage' as never)}
+            onPress={() => navigation.navigate('Tyranossauro' as never)}
           />
         </WrapperPlacesHome>
       </ContentPlaceDetails>

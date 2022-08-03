@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Routes} from './routes';
 import {CityPage} from '../../screens/CityPage';
 import {Parassaurolo} from '../../screens/Parassaurolofo';
+import {Tyranossauro} from '../../screens/Tyranossauro';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ export function AuthedRoutes() {
       <Screen name="Home" component={Routes} />
       <Screen name="CityPage" component={CityPage} />
       <Screen name="Parassaurolo" component={Parassaurolo} />
+      <Screen name="Tyranossauro" component={Tyranossauro} />
     </Navigator>
   );
 }
